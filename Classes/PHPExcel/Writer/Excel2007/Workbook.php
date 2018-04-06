@@ -64,9 +64,10 @@ class PHPExcel_Writer_Excel2007_Workbook extends PHPExcel_Writer_Excel2007_Write
         $this->writeWorkbookProtection($objWriter, $pPHPExcel);
 
         // bookViews
-        if ($this->getParentWriter()->getOffice2003Compatibility() === false) {
+        // Se comentó la condición para compatibilidad de office365
+        // if ($this->getParentWriter()->getOffice2003Compatibility() === false) {
             $this->writeBookViews($objWriter, $pPHPExcel);
-        }
+        // }
 
         // sheets
         $this->writeSheets($objWriter, $pPHPExcel);
